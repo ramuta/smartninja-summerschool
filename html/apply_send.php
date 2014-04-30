@@ -56,9 +56,10 @@ function delayedRedirect(){
 						$message .= "\nEmail: " . $_POST['email'];
 						$message .= "\nTelephone: " . $_POST['phone2'];
 						$message .= "\nStopnja: " . $_POST['country'];
-						$message .= "\nAge: " . $_POST['age'];
-						/*$message .= "\nGender: " . $_POST['gender'];*/
-						$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
+						$message .= "\nRojstni datum: " . $_POST['age'];
+						$message .= "\nNaslov: " . $_POST['address'];
+						$message .= "\nPrenočišče v Situli: " . $_POST['sleepover'];
+						//$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
 						/*$message .= "\nPreferences?\n" ;    CHECKBOXES */
 						foreach($_POST['course_1'] as $value) 
 							{ 
@@ -71,12 +72,7 @@ function delayedRedirect(){
 						$user = "$mail";
 						$usersubject = "Prijava na poletno šolo programiranja";
 						$userheaders = "From: info@start-up.si\n";
-						$usermessage = "Hvala za prijavo na SmartNinja poletno šolo programiranja.
-										Glede nadaljnih korakov vas bomo v kratkem kontaktirali./n
-										/n
-										Lep pozdrav,/n
-										Matej Ramuta/n
-										Vodja programa SmartNinja";
+						$usermessage = "Hvala za prijavo na SmartNinja poletno šolo programiranja. Glede nadaljnih korakov vas bomo v kratkem kontaktirali.\n\nLep pozdrav,\nMatej Ramuta\nVodja poletne šole SmartNinja";
 						mail($user,$usersubject,$usermessage,$userheaders);
 	
 ?>

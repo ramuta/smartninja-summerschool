@@ -154,6 +154,34 @@ jQuery(document).ready(function(){
 		return false;
 
 	});
-		});
+
+    // validate application at home page (matej)
+    $("#prijava-gumb").click(function(e) {
+        var name = $("#prijava-name").val();
+        var lastname = $("#prijava-lastname").val();
+        var email = $("#prijava-email").val();
+        var address = $("#prijava-address").val();
+        var age = $("#prijava-age").val();
+        var gsm = $("#prijava-gsm").val();
+        var stopnja = $("#prijava-stopnja").val();
+        var sleepover = $("#prijava-sleepover").val();
+
+        if (name == "" ||
+            lastname == "" ||
+            email == "" ||
+            address == "" ||
+            age == "" ||
+            gsm == "" ||
+            stopnja == "" ||
+            sleepover == ""
+            ) {
+            alert("Prosim izpolni vsa polja.");
+
+            e.preventDefault();
+        }
+
+
+    });
+});
 
   /* ]]> */

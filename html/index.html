@@ -530,17 +530,36 @@
                   <div class="shadow"></div>
               </div><!-- end top-wizard -->
 
-              <form name="example-1" id="wrapped" action="apply_send.php" method="POST" >
+              <form name="example-1" id="wizard" action="apply_send.php" method="POST" >
                   <div id="middle-wizard">
                       <div class="step">
                           <div class="row">
-                              <h3 class="col-md-10">Prijavi se na poletno šolo!</h3>
-                              <p class="col-md-12">Lorem ipsum dolor sit amet, quidam semper duo ea. Modo menandri molestiae ad pri, ut nec falli consetetur.<br> Call the admission departement for support <strong>+0034 9423444</strong></p>
+                              <h3>Prijavi se na poletno šolo!</h3>
+
+                              <div class="col-md-6">
+                                  <p>Poletna šola bo potekala od 7.-13. julija 2014 v Novem mestu. Organizator poletne šole je StartUP Novo mesto.</p>
+
+                                  Cena:
+                                  <ul>
+                                      <li>Brez prenočišča: <strong>299,00 EUR</strong></li>
+                                      <li>S prenočiščem (nočitev + zajtrk): <strong>399,00 EUR</strong></li>
+                                  </ul>
+                                  <br>
+                              </div>
+
+                              <div class="col-md-6">
+
+                                  <p>Za dodatne informacije lahko pišete na <strong>info@start-up.si</strong> ali pokličete na <strong>040 509 979 (Matej)</strong></p>
+                              </div>
+                          </div>
+
+                            <div class="row">
                               <div class="col-md-6">
                                   <ul class="data-list">
-                                      <li><div class="form-group"><input type="text" name="firstname" class="required form-control" placeholder="First name"><span class="input-icon"><i class="icon-user"></i></span></div></li>
-                                      <li><div class="form-group"><input type="text" name="lastname" class="required form-control" placeholder="Last name"><span class="input-icon"><i class="icon-user"></i></span></div></li>
-                                      <li><div class="form-group"><input type="email" name="email" class="required form-control" placeholder="Your Email"><span class="input-icon"><i class="icon-email"></i></span></div></li>
+                                      <li><div class="form-group"><input type="text" name="firstname" class="required form-control" placeholder="Ime" id="prijava-name"><span class="input-icon"><i class="icon-user"></i></span></div></li>
+                                      <li><div class="form-group"><input type="text" name="lastname" class="required form-control" placeholder="Priimek" id="prijava-lastname"><span class="input-icon"><i class="icon-user"></i></span></div></li>
+                                      <li><div class="form-group"><input type="email" name="email" class="required form-control" placeholder="Email" id="prijava-email"><span class="input-icon"><i class="icon-email"></i></span></div></li>
+                                      <li><div class="form-group"><input type="text" name="address" class="required form-control" placeholder="Naslov (ulica, hišna št., kraj" id="prijava-address"><span class="input-icon"><i class="icon-home"></i></span></div></li>
                                   </ul>
                               </div><!-- end col-md-6 -->
 
@@ -548,39 +567,33 @@
 
 
                                   <ul class="data-list" style="margin:0; padding:0;">
-                                      <li><div class="form-group"><input type="text" name="phone2" class="required form-control" placeholder="Your phone number"><span class="input-icon"><i class="icon-phone"></i></span></div></li>
+                                      <li id="age"><input type="text" name="age" class="required form-control" placeholder="Rojstni datum" id="prijava-age"></li>
+                                      <li><div class="form-group"><input type="text" name="phone2" class="required form-control" placeholder="Telefonska številka" id="prijava-gsm"><span class="input-icon"><i class="icon-phone"></i></span></div></li>
                                       <li><div class="styled-select">
-                                          <select class="form-control required" name="country">
+                                          <select class="form-control required" name="country" id="prijava-stopnja">
                                               <option value="" selected>Izberi stopnjo</option>
                                               <option value="basic">Začetna stopnja</option>
                                               <option value="advanced">Napredna stopnja</option>
                                           </select>
                                       </div>
                                       </li>
-                                  </ul>
-                                  <ul class="data-list floated clearfix">
-                                      <li id="age"><input type="text" name="age" class="required form-control" placeholder="Starost"></li>
 
+                                      <li><div class="styled-select">
+                                          <select class="form-control required" name="sleepover" id="prijava-sleepover">
+                                              <option value="" selected>Prenočišče (DA/NE)?</option>
+                                              <option value="ne">NE - brez prenočišča (299,00 EUR)</option>
+                                              <option value="da">DA - s prenočiščem (399,00 EUR)</option>
+                                          </select>
+                                      </div>
+                                      </li>
                                   </ul>
 
                               </div><!-- end col-md-6 -->
                           </div><!-- end row -->
 
                           <div class="row">
-                              <div class="col-md-4 col-md-offset-4">
-                                  <ul class="data-list" id="terms">
-                                      <li>
-                                          <strong>Do you accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a> ?</strong>
-                                          <label class="switch-light switch-ios ">
-                                              <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
-                                    <span>
-                                        <span class="ie8_hide">No</span>
-                                        <span>Yes</span>
-                                    </span>
-                                              <a></a>
-                                          </label>
-                                      </li>
-                                  </ul>
+                              <div class="col-md-5 col-md-offset-4">
+                                      <strong>S prijavo sprejemaš <a href="#" data-toggle="modal" data-target="#myModal">pravila in pogoje poletne šole</a>.</strong>
                               </div>
                           </div>
 
@@ -590,7 +603,7 @@
 
                     <div class="row">
                         <div class="submit step" id="complete">
-                            <button type="submit" name="process" class="submit">Oddaj prijavo</button>
+                            <button type="submit" name="process" class="submit" id="prijava-gumb">Oddaj prijavo</button>
                         </div><!-- end submit step -->
                     </div>
 
@@ -603,6 +616,79 @@
 
       </div>
   </section><!-- end section wizard container -->
+
+  <!-- Modal: Terms and conditions -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Pogoji sodelovanja</h4>
+              </div>
+              <div class="modal-body">
+                  PRAVILA IN POGOJI SODELOVANJA V POLETNI ŠOLI SMART NINJA<br>
+                  <br>
+                  1. SPLOŠNE DOLOČBE<br>
+                  <br>
+                  Poletna šola Smart Ninja je izobraževalna delavnica (v nadaljevanju: delavnica), ki ga organizira Klub mladih podjetnikov (Startup Novo mesto) (v nadaljevanju: organizator).
+                  <br>
+                  V imenu organizatorja program vodi organizacijski odbor (v nadaljevanju: odbor).
+                  <br>
+                  Udeleženci (v nadaljevanju: udeleženci) so posamezniki, ki so se prijavili na delavnico in sprejemajo pravila in pogoje sodelovanja v programu.
+                  <br><br>
+                  2. POTEK IN POGOJI<br>
+                  <br>
+                  Na delavnici lahko sodeluje vsak, ki se je prek prijavnega obrazca prijavil v program ter sprejel pravila in pogoje sodelovanja na delavnici. Prijava mora biti oddana do izteka roka za prijavo ter vsebovati vse zahtevane podatke. Podatki morajo biti točni.
+                  <br>
+                  Organizator si pridržuje pravico do omejitve števila udeležencev. Tolmačenja in pojasnila k določbam in pravilom daje odbor, njegove odločitve so dokončne in na njih ni mogoča pritožba.
+                  <br>
+                  Kotizacija za udeležbo na delavnici znaša 299,00 EUR.
+                  <br>
+                  Udeleženci morajo pred iztekom rok za prijavo poravnati kotizacijo v celoti. V primeru odpovedi do 7  dni pred rokom izteka je organizator dolžan povrniti kotizacijo v celoti. Manj kot 7 dni pred iztekom roka je organizator dolžan povrniti le 50 % celotne kotizacije. Na zadnji dan roka za prijavo na delavnico organizator ni dolžan vrniti kotizacije udeležencu.
+                  <br><br>
+                  Udeleženec bo:<ul>
+                      <li>v programu aktivno sodeloval,</li>
+                      <li>se udeležil vseh aktivnosti znotraj delavnice,</li>
+                      <li>pri delu uporabljal orodja in programe, za katera ima ustrezne pravice,</li>
+                      <li>skrbel za nemoteno delo in izvajanje delavnice,</li>
+                      <li>z lastnino, tehničnimi pripomočki in ostalo opremo bo ravnal odgovorno. V primeru škode je udeleženec obvezujoč povrnitve škode.</li>
+                  </ul>
+
+                  Organizator bo:<ul>
+                      <li>izvedel vse aktivnosti delavnic poletne šole SmartNinja</li>
+                      <li>zagotovil kvalitetno izpeljavo delavnic</li>
+                      <li>zagotovil tehnično infrastrukturo za izvedbo delavnice</li>
+                      <li>zagotovil ostalo infrastrukturo (hrana, pijača in morebitna prenočitev)</li>
+                  </ul>
+                  Udeleženec se bo vzdržal kakršnega koli delovanja, ki bi škodilo ugledu in dobremu imenu organizatorja.<br>
+                  <br>
+                  Prijava v program poteka od 1.5.2014 do 5.7.2014. Delavnica traja 7.7.2014 do 13.7.2014.<br>
+                  <br>
+
+                  3. VARSTVO PODATKOV<br>
+                  <br>
+                  Organizator pri izvajanju delavnice obdeluje osebne podatke udeležencev, ki mu jih ti posredujejo. Organizator vse osebne podatke varuje in obdeluje v skladu s predpisi, ki urejajo varstvo osebnih podatkov. Organizator si pridržuje pravico spremljanja delovanja in aktivnosti udeležencev ter pripravljanja člankov o njihovem delovanju v programu. Organizator ne bo javno objavljal podatkov ali informacij, ki so poslovna skrivnost.
+                  <br><br>
+                  4. KONČNE DOLOČBE<br>
+                  <br>
+                  V primeru kršitev teh pravil bo odbor udeleženca opozoril ter mu postavil rok za prenehanje ali odpravo kršitve. V kolikor bo udeleženec s kršitvami nadaljeval, ga lahko odbor izloči iz delavnice.
+                  <br>
+                  Udeleženci delavnice z oddajo prijave potrjujejo, da so seznanjeni s temi pravili ter da do organizatorja ne bodo imeli nikakršnih zahtevkov. V kolikor ni v posameznih pogodbah z udeleženci dogovorjeno drugače, organizator nima nobenih pravic na produktih ali storitvah udeležencev, ustvarjenih v sklopu delavnice. Organizator pa si pridržuje pravico pri komuniciranju z javnostjo izpostaviti, da je bil tak produkt ali storitev udeležencev ustvarjen v sklopu delavnice.
+                  <br>
+                  Prijava v delavnico ter sprejetje pogojev sodelovanja v programu ne štejeta kot pogodba o zaposlitvi ali kot povabilo k sklenitvi pogodbe o zaposlitvi. Udeleženec se za sodelovanje v programu odloči prostovoljno in s tem ne opravlja nobene vrste dela za organizatorja.
+                  <br>
+                  Pravila in pogoji sodelovanja v programu veljajo od 1. maja 2014 dalje. Organizator lahko spreminja pogoje in pravila ter se obvezuje, da bo v tem primeru na ustrezen način obvestil udeležence.
+                  <br><br>
+                  Miha Fabjan<br>
+                  predsednik Kluba mladih podjetnikov<br>
+                  (StartUP Novo mesto)
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 <footer>
 <div class="container">
