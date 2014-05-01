@@ -390,7 +390,27 @@ a.button_medium, .button_medium {
 	margin-bottom:20px;
 	-webkit-font-smoothing: antialiased;
 }
-a.button_medium:hover, .button_medium:hover {background:#262c2d;}
+
+a.button_medium_red, .button_medium_red {
+    border:none;
+    background:#ff6666;
+    color:#fff;
+    padding:7px 12px;
+    text-decoration:none;
+    transition: background .5s ease;
+    -moz-transition: background .5s ease;
+    -webkit-transition: background .5s ease;
+    -o-transition: background .5s ease;
+    display:inline-block;
+    cursor:pointer;
+    outline:none;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a.button_medium:hover, .button_medium:hover, a.button_medium_red:hover, .button_medium_red:hover {background:#262c2d;}
 
 a.button_subscribe, .button_subscribe {
 	border:none;
