@@ -53,7 +53,7 @@
 	background-color:#252525;
 	}
 .sf-menu li {
-	background: ;
+	/*background: ;*/
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
@@ -178,7 +178,7 @@ ul.sf-menu li a:hover{
 }
     .sf-menu {
         width: 100%!important;
-        display: none;
+        /*display: none;  tale ne sme bit none */
     }
     .sf-menu.xactive {
         display: block!important;
@@ -199,3 +199,4 @@ ul.sf-menu li a:hover{
         display: block!important;
     }
 }
+

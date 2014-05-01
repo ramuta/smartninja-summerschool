@@ -28,6 +28,7 @@ body {
 	font-size:14px;
 	line-height:20px;
 	margin:0;
+    padding-top: 75px;
 	background-color:#fff;
 	color:#2d4050;
 	-webkit-font-smoothing: antialiased !important;
@@ -172,7 +173,7 @@ h1 {
 	text-transform:uppercase;
 	font-weight:400;
 	font-size:36px;
-	margin-top:0;
+	margin-top:30px;
 }
 
 #sub-header-features h1, #sub-header-features-2 h1{
@@ -229,7 +230,7 @@ h1 {
 	font-weight:normal;
 	letter-spacing:5px;
 	margin-top:0;
-	padding-top:0;
+	padding-top:20px;
 }
 #main_content .post h2{
 	font-size:26px;
@@ -1220,7 +1221,7 @@ border-radius: 0;
 }
  #wizard_bg{
 	background:#0cbdaa url(../img/bg_sub-header.png) repeat 0 0;
-	padding:60px 0;
+	padding:90px 0;
 }
 
 #login {
