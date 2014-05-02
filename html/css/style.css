@@ -285,6 +285,7 @@ footer {
 	color:#fff;
 	width:100%;
 	padding-top:150px;
+    padding-bottom: 50px;
 	text-align:center;
 	font-size:13px;
 }
@@ -333,6 +334,8 @@ ul#follow_us li a:hover{
 	background-color:#202020;
 	padding:10px;
 	color:#555;
+    text-align:center;
+    font-size:13px;
 }
 footer hr{
 	border-color:#2a2a2a;
@@ -2523,4 +2526,10 @@ footer h3 {
     font-style:normal;
     display:block;
     color:#999;
+}
+
+/* Row fix */
+.row {
+    margin-left: -15px;
+    margin-right: 0;
 }
