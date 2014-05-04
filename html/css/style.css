@@ -20,11 +20,12 @@ CSS STRUCTURE:
 @import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
 @import url('http://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:400,700,900');
 
 
 /* Structure */
 body {
-	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 	font-size:14px;
 	line-height:20px;
 	margin:0;
@@ -143,7 +144,7 @@ p.lead.boxed{
 	padding: 3px 12px;
 }
 a {
-  color: #488dc6;
+  color: #0cbdaa;
   text-decoration: none;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -155,7 +156,7 @@ a:focus {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -1298,8 +1299,8 @@ border-radius: 0;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	font-size:18px;
-	border:2px solid  #8dc63f;
-	color:#8dc63f;
+	border:2px solid  #ff6666;
+	color:#ff6666;
 	padding:15px 35px;
 	text-decoration:none; 
 	transition: background .5s ease; 
@@ -1313,7 +1314,7 @@ border-radius: 0;
 	outline:none;
 	background:#fff;
 }
-#complete button:hover{background:#00aeef; color:#fff; border:2px solid  #00aeef;}
+#complete button:hover{background:#ff6666; color:#fff; border:2px solid  #ff6666;}
 
 /** Floated inputs: ex the gender radio ==================== **/   
 ul.floated {
@@ -1727,7 +1728,7 @@ input.form-control, textarea.form-control {
 	font-size:14px;
 	font-weight:400;
 	margin-bottom:25px;
-	font-family: 'Raleway', Arial, sans-serif;
+	font-family: 'Ubuntu', Arial, sans-serif;
 	line-height: 1.428571429;
 	padding: 6px 12px;
 }
