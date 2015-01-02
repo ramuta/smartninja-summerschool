@@ -55,10 +55,10 @@ function delayedRedirect(){
 						$message .= "\nLast Name: " . $_POST['lastname'];
 						$message .= "\nEmail: " . $_POST['email'];
 						$message .= "\nTelephone: " . $_POST['phone2'];
-						$message .= "\nStopnja: " . $_POST['country'];
+						$message .= "\nTečaj: " . $_POST['country'];
 						$message .= "\nRojstni datum: " . $_POST['age'];
 						$message .= "\nNaslov: " . $_POST['address'];
-						$message .= "\nPrenočišče v Situli: " . $_POST['sleepover'];
+						$message .= "\nVišina kotizacije: " . $_POST['sleepover'];
 						//$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
 						/*$message .= "\nPreferences?\n" ;    CHECKBOXES */
 						foreach($_POST['course_1'] as $value) 
